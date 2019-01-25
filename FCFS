@@ -62,9 +62,8 @@ public class FCFS {
             AvgTat = AvgTat + Tat[j];
             AvgWt = AvgWt + Wt[j];
        }
-        AvgTat = AvgTat/(P.length + 1);
-        AvgWt = AvgWt/(P.length +1);
-       
+        AvgTat = AvgTat/(P.length );
+        AvgWt = AvgWt/(P.length );       
         System.out.println("P\tA\tB\tC\tT\tW");
       for(int j=0;j<At.length;j++){
             System.out.println(P[j]+"\t"+At[j]+"\t"+Bt[j]+"\t"+Ct[j]+"\t"+Tat[j]+"\t"+Wt[j]);
