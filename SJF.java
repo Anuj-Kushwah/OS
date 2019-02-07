@@ -27,6 +27,7 @@ public class Os {
        }
         }
        }
+	    for(int k=1;k<At.length;k++){
        for(int i=0;i<At.length-1;i++){
             if(At[i]==At[i+1]&&Bt[i]>Bt[i+1]){
                int Temp = Bt[i];
@@ -38,7 +39,7 @@ public class Os {
                 temp = P[i+1];
                 P[i+1] = P[i];
                 P[i] = temp;
-            
+	    }
            }
            }
           for(int i=0;i<At.length;i++){
