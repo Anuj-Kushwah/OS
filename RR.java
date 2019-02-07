@@ -1,6 +1,13 @@
-
-package os;
-public class Round_Robin {
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ *
+ * @author Exam
+ */
+public class os {
      public static void main(String[] args) {
         int[] P ={1,2,3,4};
       	int[] At ={0,5,3,4};
@@ -35,47 +42,29 @@ public class Round_Robin {
        }
         }
         }       
-        
-        
-          
-              
-          while(true){
-           for(int i=0;i<At.length;i++){
-                  if(i==0){                      
-                    if(Rem[i]>TS){
-                        Rem[i]=Rem[i]-TS;
-                        CuT = CuT+TS;
-                        Rt = Rt - TS;
-                        System.out.println("RT 1:"+Rt);
-                    }else{
-                                CuT = CuT+Rem[i];
-                                Rem[i] = 0; 
-                                Ct[i] = CuT;
-                                Rt = Rt - Rem[i];System.out.println("RT 1:"+Rt);System.out.println("CuT :"+CuT);
-                    }
-                  }else if(i>0){
-                      if(Rem[i]>TS){
-                        Rem[i]=Rem[i]-TS;
-                        CuT = CuT+TS;
-                        Rt = Rt - TS;
-                        System.out.println("RT 2:"+Rt);
-                    }else if(Rem[i]<TS){
-                                CuT = CuT+Rem[i];
-                                Rem[i] = 0;
-                                Ct[i] = CuT+Ct[i-1];
-                                Rt = Rt - Rem[i];System.out.println("RT3 :"+Rt);
-                    }else if(Rem[i] == TS){
-                                CuT = CuT+Rem[i];
-                                Rem[i] = 0;
-                                Ct[i] = CuT+Ct[i-1];
-                                Rt = Rt - Rem[i];System.out.println("RT4 :"+Rt);
-                    }
-                  }
-		}
-         if(Rt>0){
-          break;
-          }
-          }
+        int i=0;
+         while(Rt>0){
+             if(i==0 && At[i]==0 && Rem[i]>0){
+                 CuT = CuT+2;
+                 Rt = Rt-2;
+                 Rem[i] = Rem[i]-2;
+             }else{
+                 if(i==0 && At[i]==0 && Rem[i]==2){
+                 CuT = CuT+2;
+                 Rt = Rt-2;
+                 Rem[i] = Rem[i]-2;
+                 Ct[i] = CuT;
+                 }else{
+                     if(i==0 && At[i]>0 && Rem[i]>0){
+                        CuT = CuT+2;
+                        Rt = Rt-2;
+                        Rem[i] = Rem[i]-2;
+                        CuT = CuT + (At[i] - CuT);
+                    }  
+                 }
+             }
+             
+         }
       /*for(int i=0;i<At.length;i++){
                 if(i == 0){                        
                         Ct[i] =At[i]+ Bt[i];
