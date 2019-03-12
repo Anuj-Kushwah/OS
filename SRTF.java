@@ -1,9 +1,9 @@
 public class SRTF {
     public static void main(String[] args) {
 
-  int[] P ={0,1,2,3};
+  	int[] P ={0,1,2,3};
 
-  int[] At ={2,1,3,5};
+  	int[] At ={2,1,3,5};
 
 	int[] Bt ={3,2,4,6};
 
@@ -13,7 +13,7 @@ public class SRTF {
 
 	int[] Wt = {0,0,0,0};
 
-  int[] Rem ={0,0,0,0};
+  	int[] Rem ={0,0,0,0};
 
 	float AvgWt=0, AvgTat=0;
         int Count=0,CuT=0;
