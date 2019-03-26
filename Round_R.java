@@ -96,9 +96,11 @@ public class RR {
                        if((At[i] > CuT)){
                              i = i-1; 
                        }
-                       if(Rem[i]==0 && At[i+1]>CuT){
-                            CuT = CuT+1;
-                            
+                       if(i<At.length-1){
+			       if(Rem[i]==0 && At[i+1]>CuT){
+				    CuT = CuT+1;
+
+			       }
                        }
                        
                         
