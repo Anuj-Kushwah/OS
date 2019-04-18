@@ -40,7 +40,7 @@ public class Bankeralgo {
         }
 
         System.out.println("");
-        System.out.println("Alloc \t Max \t Need ");
+        System.out.println("Alloc \t\t Max \t\t Need ");
         for(int i=0;i<p;i++){
             System.out.println(Arrays.toString(alloc[i])+"\t"+Arrays.toString(max[i])+"\t"+Arrays.toString(need[i]) );
         }
