@@ -42,26 +42,9 @@ public class Bankeralgo {
         System.out.println("");
         System.out.println("Alloc \t Max \t Need ");
         for(int i=0;i<p;i++){
-            System.out.println("");
-            for(int j=0;j<avail.length;j++){
-                System.out.print(alloc[i][j]);
-                System.out.print(" ");
-            }
-            System.out.print("\t");
-            for(int j=0;j<avail.length;j++){
-                System.out.print(max[i][j]);
-                System.out.print(" ");
-            }
-            System.out.print("\t");
-            for(int j=0;j<avail.length;j++){
-                System.out.print(need[i][j]);
-                System.out.print(" ");
-            }
+            System.out.println(Arrays.toString(alloc[i])+"\t"+Arrays.toString(max[i])+"\t"+Arrays.toString(need[i]) );
         }
-        System.out.println("");
-        System.out.print("Available : " + Arrays.toString(avail) );
-        
-        System.out.println("");
+        System.out.println("Available : " + Arrays.toString(avail) );
         System.out.println("Safe Sequence : "+Arrays.toString(safseq) );
         
     }
